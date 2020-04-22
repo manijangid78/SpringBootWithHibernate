@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student World</title>
+</head>
+<body>
+    <div align="center">
+        <h1>Welcome to Student World</h1>
+
+        <form action="student_data" method="post">
+            <label>Enter Id : </label>
+            <input type="number" id="id" name="id"/>
+            <input type="submit" value="Submit">
+        </form>
+        <br>
+        <br>
+        <h4 th:text="${get_data_message}"></h4>
+        <table th:each="studentData:${student_data}">
+            <tr>
+                <td>Student Id : </td>
+                <td th:text="${studentData.id}"></td>
+            </tr>
+            <tr>
+                <td>Student Name : </td>
+                <td th:text="${studentData.name}"></td>
+            </tr>
+            <tr>
+                <td>Student Branch : </td>
+                <td th:text="${studentData.branch}"></td>
+            </tr>
+        </table>
+
+        <h2>
+            <a th:href="student_operation">way to home</a>
+        </h2>
+    </div>
+</body>
+</html>

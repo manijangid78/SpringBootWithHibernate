@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Student World</title>
+</head>
+<body>
+    <div align="center">
+        <h1>Welcome to Student World</h1>
+        <form action="student_login" method="post">
+            <table>
+                <tr>
+                    <td>User Id</td>
+                    <td><input type="number" name="id"></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="passwd"></td>
+                </tr>
+            </table>
+            <input type="submit" value="Submit">
+        </form>
+        <h4 th:text="${login_message}"></h4>
+    </div>
+</body>
+</html>

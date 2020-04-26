@@ -8,12 +8,12 @@
     <div align="center">
         <h1>Welcome to Student World</h1>
         <h2>Select Any Operation</h2>
-        <a th:href="student_get_data">Get Student Data</a><br>
-        <a th:href="student_add">Add a Student</a><br>
-        <a th:href="student_edit">Edit Student Detail</a><br>
-        <a th:href="student_delete">Delete Student Detail</a>
+        <a th:href="@{__${T(com.mani.SpringHibDemo.util.MappingAttributes).STUDENT_GET_DATA}__}">Get Student Data</a><br>
+        <a th:href="@{__${T(com.mani.SpringHibDemo.util.MappingAttributes).STUDENT_ADD}__}">Add a Student</a><br>
+        <a th:href="@{__${T(com.mani.SpringHibDemo.util.MappingAttributes).STUDENT_EDIT}__}">Edit Student Detail</a><br>
+        <a th:href="@{__${T(com.mani.SpringHibDemo.util.MappingAttributes).STUDENT_DELETE}__}">Delete Student Detail</a>
         <br>
-        <h5><a th:href="home">Log Out</a></h5>
+        <h5><a th:href="@{__${T(com.mani.SpringHibDemo.util.MappingAttributes).STUDENT_LOGOUT}__}">Log Out</a></h5>
     </div>
 </body>
 </html>

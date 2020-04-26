@@ -8,7 +8,7 @@
     <div align="center">
         <h1>Welcome to Student World</h1>
 
-        <form action="student_done" method="POST">
+        <form th:action="@{__${T(com.mani.SpringHibDemo.util.MappingAttributes).STUDENT_DONE}__}" method="POST">
             <table th:each="new_student:${new_student}">
                 <tr>
                     <td>Enter Id </td>

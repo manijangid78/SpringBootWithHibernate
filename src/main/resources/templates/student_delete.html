@@ -8,14 +8,14 @@
     <div align="center">
         <h1>Welcome to Student World</h1>
 
-        <form action="student_delete" method="post">
+        <form th:action="@{__${T(com.mani.SpringHibDemo.util.MappingAttributes).STUDENT_DELETE}__}" method="post">
             <label>Enter Id : </label>
             <input type="number" id="id" name="id"/>
             <input type="submit" value="Submit">
         </form>
         <br>
         <h2>
-            <a th:href="student_operation">way to home</a>
+            <a th:href="@{__${T(com.mani.SpringHibDemo.util.MappingAttributes).STUDENT_OPERATION}__}">way to home</a>
         </h2>
         <h3 th:text="${delete_message}"></h3>
     </div>

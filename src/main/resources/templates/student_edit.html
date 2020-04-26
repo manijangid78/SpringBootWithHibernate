@@ -8,7 +8,7 @@
     <div align="center">
         <h1>Welcome to Student World</h1>
         <h2>Edit Page</h2>
-        <form action="student_edit" method="post">
+        <form th:action="@{__${T(com.mani.SpringHibDemo.util.MappingAttributes).STUDENT_EDIT}__}" method="post">
             <label>Enter Id : </label>
             <input type="number" id="id" name="id"/>
             <input type="submit" value="Submit">
@@ -16,7 +16,7 @@
         <br>
         <h3 th:text="${edit_message}"></h3>
         <br>
-        <form action="student_done" method="POST">
+        <form th:action="@{__${T(com.mani.SpringHibDemo.util.MappingAttributes).STUDENT_DONE}__}" method="POST">
             <table th:each="student:${student}">
                 <tr>
                     <td>Enter Id </td>
@@ -38,7 +38,7 @@
             <br>
             <input type="submit" value="Submit">
         </form>
-        <h4><a th:href="student_operation">Click to Home</a></h4>
+        <h4><a th:href="@{__${T(com.mani.SpringHibDemo.util.MappingAttributes).STUDENT_OPERATION}__}">Click to Home</a></h4>
         <h3 th:text="${message}"></h3>
     </div>
 </body>

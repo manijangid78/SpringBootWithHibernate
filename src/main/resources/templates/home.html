@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Student World</title>
@@ -8,7 +8,7 @@
     <div height="100dp"></div>
     <div align="center">
         <h1>Welcome to Student World</h1>
-        <a href="student_login">click to getData</a>
+        <a th:href="@{__${T(com.mani.SpringHibDemo.util.MappingAttributes).STUDENT_LOGIN}__}">click to getData</a>
     </div>
 </body>
 </html>

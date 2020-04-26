@@ -21,6 +21,7 @@ public class ProductImpl {
     }
 
     public Product getProduct(int id){
+        System.out.println("hello");
         return repository.findById(id).orElse(null);
     }
 
